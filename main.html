@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-800">
+    <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
+        <header>
+            <nav class="flex justify-around items-center space-x-6">
+                <img src="src/assets/Group.png" alt="" class="w-16">
+                <div>
+                    <h1 class="text-2xl font-bold">$ 4500</h1>
+                    <p class="border rounded p-1">Available Balance</p>
+                </div>
+                <button class="btn">Logout</button>
+            </nav>
+            <section class="mt-10">
+                <h1 class="text-3xl font-bold">🔥 Welcome to Paymate!</h1>
+                <p>Enjoy easy and convenient financial services with us. Cashout charge is low</p>
+
+                <div class="cards grid grid-cols-3 mt-14 gap-2 p-2">
+                    <div class="box border p-4 text-center rounded-sm">
+                        <img src="src/assets/wallet1.png" class="w-8 mx-auto" alt="">
+                        <h3>Add Money</h3>
+                    </div>
+                    <div class="box border p-4 text-center rounded-sm">
+                        <img src="src/assets/send1.png" class="w-8 mx-auto" alt="">
+                        <h3>Cashout</h3>
+                    </div>
+                    <div class="box border p-4 text-center rounded-sm">
+                        <img src="src/assets/money1.png" class="w-8 mx-auto" alt="">
+                        <h3>Transfer Money</h3>
+                    </div>
+
+
+                    <div class="box border p-4 text-center rounded-sm">
+                        <img src="src/assets/bonus1.png" class="w-8 mx-auto" alt="">
+                        <h3>Rewards</h3>
+                    </div>
+                    <div class="box border p-4 text-center rounded-sm">
+                        <img src="src/assets/purse1.png" class="w-8 mx-auto" alt="">
+                        <h3>Pay Bill</h3>
+                    </div>
+                    <div class="box border p-4 text-center rounded-sm">
+                        <img src="src/assets/transaction1.png" class="w-8 mx-auto" alt="">
+                        <h3>Transactions</h3>
+                    </div>
+                </div>
+
+                <section class="mt-10">
+                    <h2>Add Money</h2>
+                    <div class="hero">
+                        <div class="hero-content flex-col">
+                          <div class="text-center">
+                            <h1 class="text-5xl font-bold">Login now!</h1>
+                            <p class="py-6">
+                              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+                              quasi. In deleniti eaque aut repudiandae et a id nisi.
+                            </p>
+                          </div>
+                          <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                            <div class="card-body">
+                              <fieldset class="fieldset">
+                                <legend>Select Bank</legend>
+                                <select class="select">
+                                    
+                                    <option disabled selected>Pick a Bank</option>
+                                    <option value="CommBank">CommBank</option>
+                                    <option value="ANZ">ANZ</option>
+                                    <option value="StGeorge">St George</option>
+                                  </select>
+                                  <label class="fieldset-label">Phone Number</label>
+                                  <input type="number" class="input" id="phone-number-in" value="0457516493" placeholder="Type your Number" required/>
+                                  <label class="fieldset-label">PIN</label>
+                                  <input type="text" class="input" id="pin-in" value="1234" placeholder="Type your PIN" required/>
+                                  <div><a class="link link-hover">Forgot password?</a></div>
+                                  
+                                
+                                <button class="btn btn-neutral mt-4 bg-blue-700">Add Money</button>
+                              </fieldset>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </section>
+            </section>
+        </header>
+    </section>
+</body>
+</html>
