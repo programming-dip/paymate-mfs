@@ -13,7 +13,7 @@
             <nav class="flex justify-around items-center space-x-6">
                 <img src="src/assets/Group.png" alt="" class="w-16">
                 <div>
-                    <h1 class="text-2xl font-bold">$ 4500</h1>
+                    <h1 class="text-2xl font-bold">$ <span id="balance-main-page">4500</span></h1>
                     <p class="border rounded p-1">Available Balance</p>
                 </div>
                 <button class="btn">Logout</button>
@@ -51,17 +51,11 @@
                     </div>
                 </div>
 
-                <section class="mt-10">
+                <section class="mt-10 ">
                     <h2>Add Money</h2>
                     <div class="hero">
-                        <div class="hero-content flex-col">
-                          <div class="text-center">
-                            <h1 class="text-5xl font-bold">Login now!</h1>
-                            <p class="py-6">
-                              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                              quasi. In deleniti eaque aut repudiandae et a id nisi.
-                            </p>
-                          </div>
+                        <div class="hero-content flex-col w-full">
+                         
                           <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                             <div class="card-body">
                               <fieldset class="fieldset">
@@ -75,12 +69,14 @@
                                   </select>
                                   <label class="fieldset-label">Phone Number</label>
                                   <input type="number" class="input" id="phone-number-in" value="0457516493" placeholder="Type your Number" required/>
+                                  <label class="fieldset-label">Amount</label>
+                                  <input type="number" class="input" id="amount-in" value="" placeholder="Amount to transfer" required/>
                                   <label class="fieldset-label">PIN</label>
                                   <input type="text" class="input" id="pin-in" value="1234" placeholder="Type your PIN" required/>
                                   <div><a class="link link-hover">Forgot password?</a></div>
                                   
                                 
-                                <button class="btn btn-neutral mt-4 bg-blue-700">Add Money</button>
+                                <button class="btn btn-neutral mt-4 bg-blue-700" id="add-money-btn">Add Money</button>
                               </fieldset>
                             </div>
                           </div>
@@ -90,5 +86,7 @@
             </section>
         </header>
     </section>
+
+    <script src="./script/addMoney.js"></script>
 </body>
 </html>
