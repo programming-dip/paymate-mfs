@@ -23,35 +23,35 @@
                 <p>Enjoy easy and convenient financial services with us. Cashout charge is low</p>
 
                 <div class="cards grid grid-cols-3 mt-14 gap-2 p-2">
-                    <div class="box border p-4 text-center rounded-sm">
+                    <div class="box border p-4 text-center rounded-sm cursor-pointer" id="addMoney-box">
                         <img src="src/assets/wallet1.png" class="w-8 mx-auto" alt="">
                         <h3>Add Money</h3>
                     </div>
-                    <div class="box border p-4 text-center rounded-sm">
+                    <div class="box border p-4 text-center rounded-sm cursor-pointer" id="cashout-box">
                         <img src="src/assets/send1.png" class="w-8 mx-auto" alt="">
                         <h3>Cashout</h3>
                     </div>
-                    <div class="box border p-4 text-center rounded-sm">
+                    <div class="box border p-4 text-center rounded-sm cursor-pointer">
                         <img src="src/assets/money1.png" class="w-8 mx-auto" alt="">
                         <h3>Transfer Money</h3>
                     </div>
 
 
-                    <div class="box border p-4 text-center rounded-sm">
+                    <div class="box border p-4 text-center rounded-sm cursor-pointer">
                         <img src="src/assets/bonus1.png" class="w-8 mx-auto" alt="">
                         <h3>Rewards</h3>
                     </div>
-                    <div class="box border p-4 text-center rounded-sm">
+                    <div class="box border p-4 text-center rounded-sm cursor-pointer">
                         <img src="src/assets/purse1.png" class="w-8 mx-auto" alt="">
                         <h3>Pay Bill</h3>
                     </div>
-                    <div class="box border p-4 text-center rounded-sm">
+                    <div class="box border p-4 text-center rounded-sm cursor-pointer">
                         <img src="src/assets/transaction1.png" class="w-8 mx-auto" alt="">
                         <h3>Transactions</h3>
                     </div>
                 </div>
 
-                <section class="mt-10 ">
+                <section class="mt-10" id="addMoney-section" style="display: none;">
                     <h2>Add Money</h2>
                     <div class="hero">
                         <div class="hero-content flex-col w-full">
@@ -83,10 +83,37 @@
                         </div>
                       </div>
                 </section>
+
+                <section id="cashout-section" class="mt-10" style = "display: none;">
+                    <h2>Cashout</h2>
+                    <div class="hero">
+                        <div class="hero-content flex-col w-full">
+                         
+                          <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                            <div class="card-body">
+                              <fieldset class="fieldset">
+                                
+                                  <label class="fieldset-label">Agent Number</label>
+                                  <input type="number" class="input" id="agent-number-in" value="0457516493" placeholder="Enter 10 digit number" required/>
+                                  <label class="fieldset-label">Amount</label>
+                                  <input type="number" class="input" id="amount-in" value="" placeholder="Amount to transfer" required/>
+                                  <label class="fieldset-label">PIN</label>
+                                  <input type="text" class="input" id="pin-in" value="1234" placeholder="Type your PIN" required/>
+                                  <div><a class="link link-hover">Forgot password?</a></div>
+                                  
+                                
+                                <button class="btn btn-neutral mt-4 bg-blue-700" id="cashout-btn">Cashout</button>
+                              </fieldset>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </section>
             </section>
         </header>
     </section>
 
     <script src="./script/addMoney.js"></script>
+    <script src="./script/toggle.js"></script>
 </body>
 </html>
