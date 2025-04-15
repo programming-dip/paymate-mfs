@@ -9,7 +9,7 @@ document.getElementById('add-money-btn')
                 const sum = mainBalance + amount;
                 document.getElementById('balance-main-page').innerText = sum;
             }else {
-                console.log("PIN not correct");
+                alert("PIN not correct");
             }
         }else {
             alert('empty amount or PIN!')

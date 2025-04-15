@@ -1,17 +1,15 @@
-// alert("Login Connected");
-document.getElementById("login-btn")
-    .addEventListener("click",function(event){ 
-        event.preventDefault();
-        const phoneNumber = document.getElementById("phone-number-in").value;
-        const pin = document.getElementById("pin-in").value;
-        if(phoneNumber.length == 10){
-            if(parseInt(pin) === 1234){
-                window.location.href="./main.html"
-            }else {
-                alert("Incorrect PIN");
-            }
-        }else {
-           alert("invalid ph num");
+const loginBtn = document.getElementById("login-btn");
+loginBtn.addEventListener("click", function(event){
+    event.preventDefault(); 
+    const phNumField = document.getElementById("phone-number-in");
+    if(phNumField.value.length === 10){
+        const pinField = document.getElementById("pin-in");
+        if(parseInt(pinField.value) === 1234){
+            window.location.href = "./main.html";
+        }else{
+            alert("wrong pin!");
         }
-        
-    });
+    }else{
+        alert("Wrong formate of phone number");
+    }
+});
