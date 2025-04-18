@@ -45,12 +45,13 @@
                         <img src="src/assets/purse1.png" class="w-8 mx-auto" alt="">
                         <h3>Pay Bill</h3>
                     </div>
-                    <div class="box border p-4 text-center rounded-sm cursor-pointer">
+                    <div class="box border p-4 text-center rounded-sm cursor-pointer" id="transaction-box">
                         <img src="src/assets/transaction1.png" class="w-8 mx-auto" alt="">
                         <h3>Transactions</h3>
                     </div>
                 </div>
 
+                <!-- Add Money Section -->
                 <section class="mt-10" id="addMoney-section" style="display: none;">
                     <h2>Add Money</h2>
                     <div class="hero">
@@ -84,6 +85,7 @@
                       </div>
                 </section>
 
+                <!-- Cashout Section -->
                 <section id="cashout-section" class="mt-10" style = "display: none;">
                     <h2>Cashout</h2>
                     <div class="hero">
@@ -109,13 +111,21 @@
                         </div>
                       </div>
                 </section>
+
+                <!-- Transaction Section -->
+                <section id="transaction-history-section" style="display: none;">
+                  <h2 class="text-xl font-bold text-red-400">Transactions History</h2>
+                  <div id="transaction-histories"></div>
+                </section> 
             </section>
         </header>
     </section>
 
+    <script src="./script/utilities/utilities.js"></script>
     <script src="./script/toggle.js"></script>
     <script src="./script/addMoney.js"></script>
     <script src="./script/cashout.js"></script>
+    <script src="./script/transactionHistory.js"></script>
     
 </body>
 </html>
