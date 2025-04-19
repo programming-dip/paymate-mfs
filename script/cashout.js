@@ -8,6 +8,11 @@ cashoutBtn.addEventListener("click", function (event) {
     const pin = getNumInputValueById("cashout-pin-in");
     let mainBalance = getNumTextValueById("balance-main-page");
 
+    if(amount > mainBalance){
+        alert("Not enough balance!");
+        return;
+    }
+
     if (agentNumber && amount && pin) {
         if (pin === 1234) {
             const newBalance = mainBalance - amount;
@@ -16,11 +21,16 @@ cashoutBtn.addEventListener("click", function (event) {
             // List in Transaction History
             const transactionContainer = document.getElementById("transaction-histories");
 
-            const p = document.createElement("p");
-            p.innerText = `
-                             cashout $ ${amount} from ${agentNumber} agent
-                             `
-            transactionContainer.appendChild(p);
+            const div = document.createElement("div");
+            div.classList.add("bg-red-300","my-4");
+
+            div.innerHTML = `
+            <h1 class="text-gray-700">Cashout from agent<h1>
+            <h3>$${amount}</h3>
+            <p>Agent: ${agentNumber}</p>
+            `
+
+            transactionContainer.appendChild(div);
 
         } else {
             alert("PIN not correct!");

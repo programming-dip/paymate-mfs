@@ -5,8 +5,13 @@ document.getElementById('add-money-btn')
         const pin = getNumInputValueById('pin-in');
         const mainBalance = getNumTextValueById("balance-main-page");
         const phNum = getNumInputValueById("phone-number-in");
+        const bank = getTextInputValueById("bank-name");
+        if (amount < 0) {
+            alert("Invalid amount!");
+            return;
+        }
 
-        if(amount && pin && phNum){
+        if(amount && pin && phNum && bank){
             if(pin === 1234){
                 const sum = mainBalance + amount;
                 document.getElementById('balance-main-page').innerText = sum;
@@ -14,17 +19,22 @@ document.getElementById('add-money-btn')
                 // List in Transaction History
                 const transactionContainer = document.getElementById("transaction-histories");
 
-                const p = document.createElement("p");
-                p.innerText = `
-                added $ ${amount} from ${phNum}
+                const div = document.createElement("div");
+                div.classList.add("bg-green-300","my-4");
+
+                div.innerHTML = `
+                <h1 class="text-gray-700">Added Money from ${bank}</h1>
+                <h3>$${amount}</h3>
+                <p>Account Number:${phNum}</p>
+
                 `
-                transactionContainer.appendChild(p);
+                transactionContainer.appendChild(div);
 
             }else {
                 alert("PIN not correct");
             }
         }else {
-            alert('empty amount or PIN or phone!')
+            alert('empty amount or PIN or phone or Bank!')
         }
         
         

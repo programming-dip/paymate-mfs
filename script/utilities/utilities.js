@@ -16,6 +16,11 @@ function setInnerTextByIDandValue(id, value) {
     document.getElementById(id).innerText = value;
 }
 
+// function to get text inputs 
+function getTextInputValueById(id) {
+    return document.getElementById(id).value;
+}
+
 // function to handle toggle
 function handleToggle(id, status) {
     document.getElementById(id).style.display = status;
