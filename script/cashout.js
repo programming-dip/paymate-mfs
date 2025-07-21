@@ -32,6 +32,8 @@ cashoutBtn.addEventListener("click", function (event) {
 
             transactionContainer.appendChild(div);
 
+            alert("Cashout successful! Check Transactions");
+
         } else {
             alert("PIN not correct!");
         }

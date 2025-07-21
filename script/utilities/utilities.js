@@ -25,3 +25,4 @@ function getTextInputValueById(id) {
 function handleToggle(id, status) {
     document.getElementById(id).style.display = status;
 }
+

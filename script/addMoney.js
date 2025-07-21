@@ -30,6 +30,8 @@ document.getElementById('add-money-btn')
                 `
                 transactionContainer.appendChild(div);
 
+                alert("Add money successful! Check Transactions")
+
             }else {
                 alert("PIN not correct");
             }
